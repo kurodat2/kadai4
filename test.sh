@@ -23,12 +23,12 @@ fi
 if [ $? -ne 0 ]; then
   echo "OK: 文字を入力 -> エラーを返しました"
 else
-  echo "NG: 文字を入力したのに正常終了しました"
+  echo "NG: 文字を入力したのに正常終了しましし。"
   ERROR_COUNT=$((ERROR_COUNT + 1))
 fi
 echo "=== テスト終了 ==="
 if [ $ERROR_COUNT -eq 0 ]; then
-  echo "すべてのテストに合格しました！"
+  echo "すべてのテストに合格しましし！"
   exit 0
 else
   echo "${ERROR_COUNT} 個のテストで失敗しました。"
