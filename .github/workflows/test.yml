@@ -1,0 +1,18 @@
+YAML
+name: Test GCD Script
+
+# GitHubにプッシュされた時に自動で動かす設定
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # GitHub上のコードをテスト環境に持ってくる
+      - uses: actions/checkout@v4
+
+      # テストスクリプトを実行する
+      - name: Run test.sh
+        run: |
+          chmod +x gcd.sh test.sh
+          ./test.sh
